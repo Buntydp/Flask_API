@@ -1,0 +1,414 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        background-color:#FEF8DD;
+        /* background-image: 'download.jpg'; */
+        /* background-image: url('C:/Users/admin/Desktop/download.jpg'); */
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      body {
+        font-family: Calibri, Helvetica, sans-serif;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      textarea {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+        border-radius: 20px;
+        border: 2px solid #8b0000;
+      }
+
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+        background-color: #cddbba;
+        outline: none;
+      }
+
+      div {
+        padding: 10px 0;
+      }
+
+      hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+      }
+
+      .registerbtn {
+        background-color: #4caf50;
+        color: white;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border-radius: 20px;
+        border: 2px solid #8b0000;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+      }
+     label{
+         display: block;
+     }
+     label span{
+         display: inline-block;
+         text-align: right;
+         width: 625px;
+         margin-right: 15px;
+     }
+      .registerbtn:hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form name="inquiry" action="/predict" method="POST">
+      <!-- <form name="inquiry" action="." method="POST"> -->
+      <div class="container">
+        <center>
+          <h1>
+            Welcome...! <br />
+            You are on official Registration Site.
+          </h1>
+        </center>
+        <hr />
+        <div class="major">
+          <!-- <center> -->
+          <label> 
+              <span>Rating</span> 
+
+          <input type="number" name="rating" step="0.1" size="15" required placeholder="4.5" value="3"/>
+        </label>
+          <br />
+          <label>
+              <span>Company size</span>
+          <select name="Company Size">
+            <br />
+            <option value="501 to 1000 employees">501 to 1000 employees</option>
+            <option value="10000+ employees">10000+ employees</option>
+            <option value="1001 to 5000 employees">
+              1001 to 5000 employees
+            </option>
+            <option value="51 to 200 employees">51 to 200 employees</option>
+            <option value="5001 to 10000 employees">5001 to 10000 employees</option>
+          </select>
+        </label>
+          <br />
+          <label>
+              <span>Type of ownership</span>
+          <select name="Type of ownersip">
+            <option value="Company - Private">Company - Private</option>
+            <option value="Government">Government</option>
+            <option value="Non-profit Organisation">Non-profit Organisation</option>
+            <option value="Company - Public">Company - Public</option>
+            <option value="College / University">College / University</option>
+          </select>
+        </label></br>
+          <label>
+              <span>Industry</span>
+          <select name="Industry">
+            <option value="Aerospace & Defence">Aerospace & Defence</option>
+            <option value="Accounting">Accounting</option>
+            <option value="Advertising & Marketing">Advertising & Marketing</option>
+            <option value="Airlines">Airlines</option>
+            <option value="Architectural & Engineering Services">Architectural & Engineering Services</option>
+            <option value="Asphalt Product Manufacturing">Asphalt Product Manufacturing</option>
+            <option value="Audio/Visual">Audio/Visual</option>
+            <option value="Banks & Building Societies">Banks & Building Societies</option>
+            <option value="Biotech & Pharmaceuticals">Biotech & Pharmaceuticals</option>
+            <option value="Building & Construction">Building & Construction</option>
+            <option value="Computer Hardware & Software">Computer Hardware & Software</option>
+            <option value="Consumer Electronics & Appliance Shops">Consumer Electronics & Appliance Shops</option>
+            <option value="Cable, Internet & Telephone Providers">Cable, Internet & Telephone Providers</option>
+            <option value="Car Hire">Car Hire</option>
+            <option value="Charitable Foundations">Charitable Foundations</option>
+            <option value="Chemical Manufacturing">Chemical Manufacturing</option>
+            <option value="Consulting">Consulting</option>
+            <option value="Department, Clothing, & Shoe Shops">Clothing & Shoe Shops</option>
+            <option value="Energy">Energy</option>
+            <option value="Education Training Services">Education Training Services</option>
+            <option value="Electrical & Electronic Manufacturing">Electrical & Electronic Manufacturing</option>
+            <option value="Estate Agents">Estate Agents</option>
+            <option value="Fast-Food & Quick-Service Restaurants">Fast-Food & Quick-Service Restaurants</option>
+            <option value="Film Production & Distribution">Film Production & Distribution</option>
+            <option value="Food & Beverage Shops">Food & Beverage Shops</option>
+            <option value="Food & Drink Manufacturing	">Energy</option>
+            <option value="Government Agencies">Energy</option>
+            <option value="Health, Beauty & Fitness">Energy</option>
+            <option value="Healthcare Product Manufacturing">Energy</option>
+            <option value="Hotel & Resorts">Hotel & Resorts</option>
+            <option value="IT Services">IT Services</option>
+            <option value="Industrial Manufacturing">Industrial Manufacturing</option>
+            <option value="Insurance Operators">Insurance Operators</option>
+            <option value="Logistics & Supply Chain">Logistics & Supply Chain</option>
+            <option value="Membership Organisations">Membership Organisations</option>
+            <option value="Motor Vehicle Parts & Accessories Shops">Motor Vehicle Parts & Accessories Shops</option>
+            <option value="Metal & Mineral Manufacturing">Metal & Mineral Manufacturing</option>
+            <option value="Museums, Zoos & Amusement Parks">Museums, Zoos & Amusement Parks</option>
+            <option value="News Outlets">News Outlets</option>
+            <option value="Oil & Gas Exploration & Production">Oil & Gas Exploration & Production</option>
+            <option value="Oil & Gas Services">Oil & Gas Services</option>
+            <option value="Pharmacies & Health Shops">Pharmacies & Health Shops</option>
+            <option value="Research & Development">Research & Development</option>
+            <option value="Religious Organisations">Religious Organisations</option>
+            <option value="Social Services">Social Services</option>
+            <option value="Sports & Recreation">Sports & Recreation</option>
+            <option value="Staffing & Outsourcing">Staffing & Outsourcing</option>
+            <option value="Stock Exchanges">Stock Exchanges</option>
+            <option value="Transportation Equipment Manufacturing">Transportation Equipment Manufacturing</option>
+            <option value="Telecommunications Services">Telecommunications Services</option>
+            <option value="Utilities">Utilities</option>
+            <option value="Vehicle Dealers">Vehicle Dealers</option>
+            <option value="Venture Capital & Private Equity">Venture Capital & Private Equity</option>
+            <option value="Video Game">Video Game</option>
+            <option value="Wholesale">Wholesale</option>
+          </select>
+        </label>
+          <br />
+          <label>
+              <span>Sector</span>
+          <select name="Sector">
+            <option value="Retail">Retail</option>
+            <option value="Finance">Finance</option>
+            <option value="Accounting & Legal">Accounting & Legal</option>
+            <option value="Agriculture & Forestry">Agriculture & Forestry</option>
+            <option value="Arts, Entertainment & Recreation">Arts, Entertainment & Recreation</option>
+            <option value="Biotech & Pharmaceuticals">Biotech & Pharmaceuticals</option>
+            <option value="Building, Repair & Maintenance">Building, Repair & Maintenance</option>
+            <option value="Consumer Services">Consumer Services</option>
+            <option value="Education">Education	</option>
+            <option value="Government">Government</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Insurance">Insurance</option>
+            <option value="Manufacturing">Manufacturing</option>
+            <option value="Media">Media</option>
+            <option value="Non-Profits">Non-Profits</option>
+            <option value="Oil, Gas, Energy & Utilities">Oil, Gas, Energy & Utilities</option>
+            <option value="Restaurants, Pubs, Bars & Food Service">Restaurants, Pubs, Bars & Food Service</option>
+            <option value="Telecommunications">Telecommunications</option>
+            <option value="Transportation & Logistics">Transportation & Logistics</option>
+            <option value="Travel & Tourism">Travel & Tourism</option>
+            <option value="Property">Property</option>
+            <option value="Business Services">Business Services</option>
+            <option value="Aerospace & Defence">
+              Aerospace & Defence
+            </option>
+            <option value="Information Technology">
+              Information Technology
+            </option>
+          </select>
+        </label>
+          <br />
+          <label>
+              <span>Revenue</span>
+          <select name="Revenue">
+            <option value="$2 to $5 billion (USD)">$2 to $5 billion (USD)</option>
+            <option value="$5 to $10 billion (USD)">$5 to $10 billion (USD)</option>
+            <option value="$25 to $50 million (USD)">
+              $25 to $50 million (USD)
+            </option>
+            <option value="$50 to $100 million (USD)">
+              $50 to $100 million (USD)
+            </option>
+            <option value="$100 to $500 million (USD)">
+              $100 to $500 million (USD)
+            </option>
+          </select>
+        </label>
+          <br />
+          
+          <br />
+          <label>
+              <span>State</span>
+          <select name="state">
+            <option value="CA">CA</option>
+            <option value="NM">New Mexico</option>
+            <option value="TX">TX</option>
+            <option value="FL">FL</option>
+            <option value="NY">NY</option>
+            <option value="AL">ALABAMA</option>
+            <option value="AZ">Arizona	</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District of Columbia</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania	</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="UT">Utha</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington	</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+          </select>
+        </label>
+          <br />
+          
+          <br />
+          <label>
+              <span>Age</span>
+          <input
+            type="number"
+            name="age"
+            placeholder="i.e 10,35,100"
+            size="15"
+            value="25"
+          />
+        </label>
+          <br />
+          <label>
+              <span>Excel</span>
+          <select name="Excel">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </label>
+          <br />
+          <label>
+              <span>Visualisation</span>
+          <select name="Visualisation">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </label>
+          <br />
+          <label>
+            <span>ML</span>
+        <select name="ML">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+        </label>
+        <label>
+          <span>Software Testing</span>
+      <select name="ST">
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+    </label>
+    <label>
+      <span>Risk Analysis</span>
+  <select name="RA">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+  </select>
+</label>
+<label>
+  <span>Leadership</span>
+<select name="LS">
+<option value="1">Yes</option>
+<option value="0">No</option>
+</select>
+</label>
+<label>
+  <span>Critical Thinking</span>
+<select name="CT">
+<option value="1">Yes</option>
+<option value="0">No</option>
+</select>
+</label>
+<label>
+  <span>Communication</span>
+<select name="com">
+<option value="1">Yes</option>
+<option value="0">No</option>
+</select>
+</label>
+        <label>
+              <span>AWS</span>
+          <select name="aws">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </label>
+          <label>
+              <span>Database</span>
+          <select name="db">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </label>
+          <br />
+          <label>
+              <span>Analysis</span>
+          <select name="ana">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </label>
+          <br />
+          <label>
+              <span>Position</span>
+          <select name="job_simp">
+            <option value="data scientist">data scientist</option>
+            <option value="data engineer">data engineer</option>
+            <option value="manager">manager</option>
+            <option value="MLeng">ML Engineer</option>
+            <option value="analyst">Analyst</option>
+            <option value="consultant">consultant</option>
+            <option value="database engibeer">Database Engibeer</option>
+            <option value="junior engineer">Junior Engineer</option>
+            <option value="director">Director</option>
+            <option value="project manager">project manager</option>
+            <option value="software engineer">software engineer</option>
+            <option value="statistician">statistician</option>
+          </select>
+        </label>
+          <br />
+          <label>
+              <span>Seniority</span>
+          <select name="Seniority">
+            <option value="senior">senior</option>
+            <option value="junior">junior</option>
+            <option value="intern">intern</option>
+            <option value="na">na</option>
+          </select>
+        </label>
+          <br />
+          
+          <br />
+
+          <!-- </center> -->
+        </div>
+        <button type="submit" class="registerbtn">Predict</button>
+      </div>
+    </form>
+  </body>
+</html>

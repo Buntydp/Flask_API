@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: azure;
+      }
+      img {
+        border: 3px groove sandybrown;
+        padding: 3px;
+      }
+      td.cell {
+        white-space: nowrap;
+        max-width: 280px;
+        height: 45px;
+        background: sandybrown;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 8px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>
+      <span
+        >We can predict that you can get average {{salary}} as a salary
+        yearly. and range is {{range}}</span
+      >
+    </h2>
+    <table>
+      {% for row in data %}
+      <tr>
+        <!-- <td>{{row[21]}}</td> -->
+        <td  class="cell">{{ row[0] }}</td>
+        
+        <td><img src="{{row[21]}}" alt="Not Availablle"></img></td>
+
+        {% for cell in row[1:20] %}
+        <td  class="cell">{{ cell }}</td>
+        {% endfor %}
+
+        <!-- <td><img src="assets/not.png" alt="Not Availablle"></img></td> -->
+        <td><img src="{{row[20]}}"alt="Not Availablle"></img></td>
+
+        <td  class="cell"><a href="https://{{ row[22] }}" target="_blank">{{ row[22] }}</a></td>
+
+        {% for cell in row[23:] %}
+        <td  class="cell">{{ cell }}</td>
+        {% endfor %}
+
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

@@ -64,3 +64,5 @@ def jobs():
     Total = total()
     return str(Total)
         
+if __name__ == "__main__":
+    app.run()

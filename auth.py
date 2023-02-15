@@ -55,6 +55,7 @@ def Register(request):
     
     outputs = cur.fetchall()
     print(outputs)
+    conn.commit() 
     conn.close()
     return final_output
     
